@@ -11,10 +11,11 @@ services:
     environment:
       - 'TZ="Asia/Shanghai"'
       - 'SERVER_PORT=8092'
-    external_links:
-      - mysql:db #可以用db这个域名访问mysql服务
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false'
+      - 'SPRING_DATASOURCE_USERNAME=root'
+      - 'SPRING_DATASOURCE_PASSWORD=123456'
     extra_hosts:
-      - "db:host.docker.internal"
+      - "host.docker.internal:host-gateway"
 #  mall-search:
 #    image: mall/mall-search:1.0-SNAPSHOT
 #    container_name: mall-search
@@ -36,12 +37,14 @@ services:
     volumes:
       - /mydata/app/mall-portal/logs:/var/logs
       - /etc/localtime:/etc/localtime
-    environment:
-      - 'TZ="Asia/Shanghai"'
     external_links:
       - redis:redis #可以用redis这个域名访问redis服务
       - mongo:mongo #可以用mongo这个域名访问mongo服务
-      - mysql:db #可以用db这个域名访问mysql服务
       - rabbitmq:rabbit #可以用rabbit这个域名访问rabbitmq服务
     extra_hosts:
-      - "db:host.docker.internal"
+      - "host.docker.internal:host-gateway"
+    environment:
+      - 'TZ="Asia/Shanghai"'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false'
+      - 'SPRING_DATASOURCE_USERNAME=root'
+      - 'SPRING_DATASOURCE_PASSWORD=123456'
