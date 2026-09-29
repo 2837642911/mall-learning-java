@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://db:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
-    username: reader
+    username: root
     password: 123456
     druid:
       initial-size: 5 #连接池初始化大小
@@ -52,6 +52,6 @@ alipay:
   appId: your appId
   alipayPublicKey: your alipayPublicKey
   appPrivateKey: your appPrivateKey
-  returnUrl: http://192.168.3.101:8060/#/pages/money/paySuccess
+  returnUrl: http://192.168.200.131:8060/#/pages/money/paySuccess
   notifyUrl:
 

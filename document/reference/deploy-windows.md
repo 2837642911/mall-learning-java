@@ -90,7 +90,7 @@ elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/
 ## mall-admin
 
 - 启动项目：直接运行com.macro.mall.MallAdminApplication的main方法即可
-- 接口文档地址：http://localhost:8080/swagger-ui.html
+- 接口文档地址：http://localhost:8092/swagger-ui.html
 
 ## mall-search
 

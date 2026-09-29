@@ -17,7 +17,7 @@ echo '----rm image----'
 # 打包编译docker镜像
 docker build -t ${group_name}/${app_name}:${app_version} .
 echo '----build image----'
-docker run -p 8080:8080 --name ${app_name} \
+docker run -p 8092:8092 --name ${app_name} \
 --link mysql:db \
 --link redis:redis \
 -e 'spring.profiles.active'=${profile_active} \
