@@ -22,7 +22,6 @@ docker build -t ${group_name}/${app_name}:${app_version} .
 echo '----build image----'
 docker run -p 8092:8092 --name ${app_name} \
 --network ${network_name} \
---link mysql:db \
 --link redis:redis \
 -e 'spring.profiles.active'=${profile_active} \
 -e TZ="Asia/Shanghai" \
