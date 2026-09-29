@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 app_name='mall-portal'
+network_name='mall-net'
 docker stop ${app_name}
 echo '----stop container----'
 docker rm ${app_name}
@@ -8,6 +9,7 @@ docker rmi `docker images | grep none | awk '{print $3}'`
 echo '----rm none images----'
 docker run -p 8085:8085 --name ${app_name} \
 --add-host=host.docker.internal:host-gateway \
+--network ${network_name} \
 --link redis:redis \
 --link mongo:mongo \
 --link rabbitmq:rabbit \
