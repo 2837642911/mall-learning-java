@@ -17,6 +17,7 @@ services:
       - /mydata/nginx/logs:/var/log/nginx #日志文件目录挂载
     ports:
       - 8888:8888
+      - 8889:8889
   rabbitmq:
     image: rabbitmq:3.9.11-management
     container_name: rabbitmq
