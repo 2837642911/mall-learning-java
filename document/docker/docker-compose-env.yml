@@ -18,6 +18,8 @@ services:
     ports:
       - 8888:8888
       - 8889:8889
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   rabbitmq:
     image: rabbitmq:3.9.11-management
     container_name: rabbitmq
