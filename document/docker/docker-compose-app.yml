@@ -51,6 +51,3 @@ services:
       - 'SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false'
       - 'SPRING_DATASOURCE_USERNAME=root'
       - 'SPRING_DATASOURCE_PASSWORD=123456'
-      - 'SPRING_RABBITMQ_USERNAME=mall'
-      - 'SPRING_RABBITMQ_PASSWORD=mall'
-      - 'SPRING_RABBITMQ_VIRTUAL_HOST=/mall'
