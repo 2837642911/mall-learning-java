@@ -73,7 +73,7 @@ services:
     ports:
       - 27017:27017
   minio:
-    image: minio/minio
+    image: elestio/minio
     container_name: minio
     command: server /data --console-address ":9001" #指定数据目录及console运行端口启动
     volumes:
