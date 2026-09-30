@@ -16,7 +16,7 @@ services:
       - /mydata/nginx/html:/usr/share/nginx/html #静态资源根目录挂载
       - /mydata/nginx/logs:/var/log/nginx #日志文件目录挂载
     ports:
-      - 80:80
+      - 8888:8888
   rabbitmq:
     image: rabbitmq:3.9.11-management
     container_name: rabbitmq
