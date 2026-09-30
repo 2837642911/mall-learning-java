@@ -9,7 +9,7 @@ services:
     ports:
       - 6379:6379
   nginx:
-    image: nginx:1.220
+    image: nginx:1.31
     container_name: nginx
     volumes:
       - /mydata/nginx/conf:/etc/nginx #配置文件目录挂载
